@@ -1,0 +1,105 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'mydesign.ui'
+#
+# Created by: PyQt5 UI code generator 5.12.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+import pyqtgraph as pg
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(1280, 800)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabWidget.setGeometry(QtCore.QRect(10, 0, 1261, 751))
+        font = QtGui.QFont()
+        font.setFamily("Oswald")
+        font.setPointSize(14)
+        self.tabWidget.setFont(font)
+        self.tabWidget.setTabShape(QtWidgets.QTabWidget.Rounded)
+        self.tabWidget.setObjectName("tabWidget")
+        self.tab1 = QtWidgets.QWidget()
+        self.tab1.setObjectName("tab1")
+        self.topLabel = QtWidgets.QLabel(self.tab1)
+        self.topLabel.setGeometry(QtCore.QRect(40, 30, 841, 16))
+        self.topLabel.setObjectName("topLabel")
+        self.horizontalLayoutWidget_3 = QtWidgets.QWidget(self.tab1)
+        self.horizontalLayoutWidget_3.setGeometry(QtCore.QRect(30, 70, 851, 361))
+        self.horizontalLayoutWidget_3.setObjectName("horizontalLayoutWidget_3")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_3)
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.comboBox = QtWidgets.QComboBox(self.horizontalLayoutWidget_3)
+        self.comboBox.setObjectName("comboBox")
+        self.verticalLayout.addWidget(self.comboBox)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.L1 = QtWidgets.QLabel(self.horizontalLayoutWidget_3)
+        self.L1.setText("")
+        self.L1.setObjectName("L1")
+        self.horizontalLayout.addWidget(self.L1)
+        self.L2 = QtWidgets.QLabel(self.horizontalLayoutWidget_3)
+        self.L2.setText("")
+        self.L2.setObjectName("L2")
+        self.horizontalLayout.addWidget(self.L2)
+        self.L3 = QtWidgets.QLabel(self.horizontalLayoutWidget_3)
+        self.L3.setText("")
+        self.L3.setObjectName("L3")
+        self.horizontalLayout.addWidget(self.L3)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.LE1 = QtWidgets.QLineEdit(self.horizontalLayoutWidget_3)
+        self.LE1.setObjectName("LE1")
+        self.horizontalLayout_2.addWidget(self.LE1)
+        self.LE2 = QtWidgets.QLineEdit(self.horizontalLayoutWidget_3)
+        self.LE2.setObjectName("LE2")
+        self.horizontalLayout_2.addWidget(self.LE2)
+        self.LE3 = QtWidgets.QLineEdit(self.horizontalLayoutWidget_3)
+        self.LE3.setObjectName("LE3")
+        self.horizontalLayout_2.addWidget(self.LE3)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.pButton = QtWidgets.QPushButton(self.horizontalLayoutWidget_3)
+        self.pButton.setEnabled(True)
+        self.pButton.setObjectName("pButton")
+        self.verticalLayout.addWidget(self.pButton)
+        self.horizontalLayout_3.addLayout(self.verticalLayout)
+        pg.setConfigOption('background', 'w')
+        pg.setConfigOption('foreground', (0, 0, 0))
+        self.gView = pg.PlotWidget(self.horizontalLayoutWidget_3) #pw = pg.PlotWidget(name='Plot1') 
+        self.gView.setObjectName("gView")
+        self.horizontalLayout_3.addWidget(self.gView)
+        self.tabWidget.addTab(self.tab1, "")
+        self.tab2 = QtWidgets.QWidget()
+        self.tab2.setObjectName("tab2")
+        self.tabWidget.addTab(self.tab2, "")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1280, 22))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.topLabel.setText(_translate("MainWindow", "TextLabel"))
+        self.pButton.setText(_translate("MainWindow", "Generate Signal"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab1), _translate("MainWindow", "Signal Generation"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab2), _translate("MainWindow", "Signal Operation"))
+
+
